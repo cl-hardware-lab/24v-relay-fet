@@ -1,0 +1,162 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:Q_NMOS_SGD Q1
+U 1 1 6151EEE9
+P 4000 2000
+F 0 "Q1" H 4205 2046 50  0000 L CNN
+F 1 "TN0606N3-G" H 4205 1955 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_HandSolder" H 4200 2100 50  0001 C CNN
+F 3 "~" H 4000 2000 50  0001 C CNN
+	1    4000 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J2
+U 1 1 6151F984
+P 4700 1400
+F 0 "J2" H 4850 1400 50  0000 C CNN
+F 1 "LOAD" H 4900 1300 50  0000 C CNN
+F 2 "Connector_JST:JST_XH_S2B-XH-A_1x02_P2.50mm_Horizontal" H 4700 1400 50  0001 C CNN
+F 3 "~" H 4700 1400 50  0001 C CNN
+	1    4700 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J3
+U 1 1 6152043A
+P 4700 2400
+F 0 "J3" H 4780 2392 50  0000 L CNN
+F 1 "SUPPLY" H 4780 2301 50  0000 L CNN
+F 2 "Connector_JST:JST_XH_S2B-XH-A_1x02_P2.50mm_Horizontal" H 4700 2400 50  0001 C CNN
+F 3 "~" H 4700 2400 50  0001 C CNN
+	1    4700 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+24V #PWR02
+U 1 1 6152181C
+P 4500 2400
+F 0 "#PWR02" H 4500 2250 50  0001 C CNN
+F 1 "+24V" H 4515 2573 50  0000 C CNN
+F 2 "" H 4500 2400 50  0001 C CNN
+F 3 "" H 4500 2400 50  0001 C CNN
+	1    4500 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+24V #PWR01
+U 1 1 61521E18
+P 4400 1400
+F 0 "#PWR01" H 4400 1250 50  0001 C CNN
+F 1 "+24V" H 4415 1573 50  0000 C CNN
+F 2 "" H 4400 1400 50  0001 C CNN
+F 3 "" H 4400 1400 50  0001 C CNN
+	1    4400 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 1500 4450 1500
+Wire Wire Line
+	4100 1500 4100 1800
+Wire Wire Line
+	4100 2200 4100 2500
+Wire Wire Line
+	4100 2500 4500 2500
+$Comp
+L Device:R_Small R2
+U 1 1 61524B1D
+P 3650 2200
+F 0 "R2" H 3709 2246 50  0000 L CNN
+F 1 "10k" H 3709 2155 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 3650 2200 50  0001 C CNN
+F 3 "~" H 3650 2200 50  0001 C CNN
+	1    3650 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R1
+U 1 1 61525477
+P 3400 2000
+F 0 "R1" V 3204 2000 50  0000 C CNN
+F 1 "1k" V 3295 2000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 3400 2000 50  0001 C CNN
+F 3 "~" H 3400 2000 50  0001 C CNN
+	1    3400 2000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4100 2500 3650 2500
+Wire Wire Line
+	3650 2500 3650 2300
+Connection ~ 4100 2500
+Wire Wire Line
+	3800 2000 3650 2000
+Wire Wire Line
+	3650 2100 3650 2000
+Connection ~ 3650 2000
+Wire Wire Line
+	3650 2000 3500 2000
+$Comp
+L Connector_Generic:Conn_01x02 J1
+U 1 1 615260E7
+P 2800 2000
+F 0 "J1" H 2718 2217 50  0000 C CNN
+F 1 "CTRL" H 2718 2126 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 2800 2000 50  0001 C CNN
+F 3 "~" H 2800 2000 50  0001 C CNN
+	1    2800 2000
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 2100 3000 2500
+Wire Wire Line
+	3000 2500 3650 2500
+Connection ~ 3650 2500
+Wire Wire Line
+	3000 2000 3300 2000
+$Comp
+L Connector_Generic:Conn_01x02 J4
+U 1 1 6153A3F0
+P 5250 1400
+F 0 "J4" H 5400 1400 50  0000 C CNN
+F 1 "LOAD_LED" H 5550 1300 50  0000 C CNN
+F 2 "24v-relay-fet:led-connector" H 5250 1400 50  0001 C CNN
+F 3 "~" H 5250 1400 50  0001 C CNN
+	1    5250 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 1400 4450 1400
+Wire Wire Line
+	4450 1400 4450 1300
+Wire Wire Line
+	4450 1300 5050 1300
+Wire Wire Line
+	5050 1300 5050 1400
+Connection ~ 4450 1400
+Wire Wire Line
+	4450 1400 4500 1400
+Wire Wire Line
+	4450 1500 4450 1600
+Wire Wire Line
+	4450 1600 5050 1600
+Wire Wire Line
+	5050 1600 5050 1500
+Connection ~ 4450 1500
+Wire Wire Line
+	4450 1500 4100 1500
+$EndSCHEMATC

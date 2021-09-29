@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name 24v-relay-fet)(type KiCad)(uri ${KIPRJMOD}/24v-relay-fet.pretty)(options "")(descr ""))
+)
